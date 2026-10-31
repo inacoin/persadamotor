@@ -1,0 +1,50 @@
+name: Update Data Produk Yamaha
+
+on:
+  schedule:
+    # Berjalan tiap hari Senin jam 02:00 WIB (Minggu 19:00 UTC)
+    - cron: "0 19 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Jalankan parser tests
+        run: npm test
+
+      - name: Scrape produk Yamaha
+        run: npm run scrape
+        env:
+          SCRAPER_CONTACT: ${{ secrets.SCRAPER_CONTACT || 'kontak@persadamotor.id' }}
+
+      - name: Validasi build Next.js
+        run: npm run build
+
+      - name: Commit & Push jika data berubah
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/products.json data/scrape-report.json
+          if git diff --staged --quiet; then
+            echo "Tidak ada perubahan data produk Yamaha."
+          else
+            git commit -m "chore(data): auto update katalog motor Yamaha $(date +'%Y-%m-%d')"
+            git push
+          fi
+

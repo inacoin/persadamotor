@@ -1,0 +1,17 @@
+{
+  "defaults": {
+    "priceRegionLabel": "OTR Jakarta",
+    "priceAdjustment": 0
+  },
+  "products": {
+    "nmax-turbo": { "featured": true, "badge": "Terlaris" },
+    "all-new-aerox155-connected": { "featured": true },
+    "grand-filano": { "featured": true, "badge": "Hybrid" },
+    "fazzio": { "featured": true },
+    "gear-ultima": { "featured": true },
+    "xmax-connected": { "featured": true },
+    "all-new-r15-connected": { "featured": true },
+    "lexi-lx-155": { "featured": true }
+  }
+}
+

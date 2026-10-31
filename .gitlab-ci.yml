@@ -1,0 +1,48 @@
+image: node:22-bullseye
+
+stages:
+  - test
+  - scrape
+  - build
+
+cache:
+  paths:
+    - node_modules/
+    - .cache/
+
+test:
+  stage: test
+  script:
+    - npm ci
+    - npm test
+
+scrape_scheduled:
+  stage: scrape
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $CI_PIPELINE_SOURCE == "web"
+  before_script:
+    - git config --global user.name "GitLab CI Bot"
+    - git config --global user.email "bot@gitlab.com"
+  script:
+    - npm ci
+    - npm run scrape
+    - |
+      if git status --porcelain data/products.json | grep -q 'data/products.json'; then
+        git add data/products.json data/scrape-report.json
+        git commit -m "chore(data): auto update katalog motor Yamaha [skip ci]"
+        git push "https://oauth2:${GITLAB_TOKEN}@gitlab.com/${CI_PROJECT_PATH}.git" HEAD:main
+      else
+        echo "Data produk tidak mengalami perubahan."
+      fi
+
+pages:
+  stage: build
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - .next/

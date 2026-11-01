@@ -6,8 +6,8 @@ export const siteConfig = {
   dealerName: env("NEXT_PUBLIC_DEALER_NAME", "Persada Motor"),
   salesName: env("NEXT_PUBLIC_SALES_NAME", "Syaiful Ramli"),
   /** Format internasional tanpa "+" untuk wa.me */
-  waNumber: env("NEXT_PUBLIC_WA_NUMBER", "6285111315521"),
-  waDisplay: env("NEXT_PUBLIC_WA_DISPLAY", "0851-1131-5521"),
+  waNumber: env("NEXT_PUBLIC_WA_NUMBER", "6289531674991"),
+  waDisplay: env("NEXT_PUBLIC_WA_DISPLAY", "0895-3167-4991"),
   address: env(
     "NEXT_PUBLIC_DEALER_ADDRESS",
     "Jl. Raya Bekasi No.Km 18 No 49, RT.9/RW.11, Cakung, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13930",

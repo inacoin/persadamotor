@@ -27,7 +27,7 @@ resmi, disimpan sebagai JSON, lalu dirender statis oleh Next.js.
 | Item | Nilai |
 |---|---|
 | Nama sales | Syaiful Ramli |
-| WhatsApp | 085111315521 → `6285111315521` (format `wa.me`) |
+| WhatsApp | 089531674991 → `6289531674991` (format `wa.me`) |
 | Alamat | Jl. Raya Bekasi No.Km 18 No 49, RT.9/RW.11, Cakung, Kec. Pulo Gadung, Kota Jakarta Timur, DKI Jakarta 13930 |
 | Wilayah harga | OTR Jakarta |
 

@@ -7,7 +7,7 @@
 | `NEXT_PUBLIC_SITE_URL` | `https://persadamotor.id` | URL kanonik untuk SEO |
 | `NEXT_PUBLIC_DEALER_NAME` | `Persada Motor` | |
 | `NEXT_PUBLIC_SALES_NAME` | `Syaiful Ramli` | |
-| `NEXT_PUBLIC_WA_NUMBER` | `6285111315521` | format internasional tanpa `+` (0851-1131-5521) |
+| `NEXT_PUBLIC_WA_NUMBER` | `6289531674991` | format internasional tanpa `+` (0895-3167-4991) |
 | `NEXT_PUBLIC_DEALER_ADDRESS` | `Jl. Raya Bekasi No.Km 18 No 49, RT.9/RW.11, Cakung, Kec. Pulo Gadung, Kota Jakarta Timur, DKI Jakarta 13930` | untuk halaman kontak & JSON-LD |
 | `NEXT_PUBLIC_MAPS_EMBED_URL` | `https://www.google.com/maps/embed?...` | |
 | `CREDIT_FLAT_RATE` | `0.0125` | bunga flat/bulan untuk simulasi (estimasi) |

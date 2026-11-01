@@ -10,7 +10,7 @@ menggunakan scraper terjadwal.
 | Kontak Sales | |
 |---|---|
 | Nama | Syaiful Ramli |
-| WhatsApp | [0851-1131-5521](https://wa.me/6285111315521) |
+| WhatsApp | [0895-3167-4991](https://wa.me/6289531674991) |
 | Alamat | Jl. Raya Bekasi No.Km 18 No 49, RT.9/RW.11, Cakung, Kec. Pulo Gadung, Kota Jakarta Timur, DKI Jakarta 13930 |
 
 Gambar produk ditampilkan langsung dari server Yamaha (hotlink), tidak diunduh/disimpan sesuai aturan `robots.txt`.
